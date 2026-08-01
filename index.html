@@ -38,11 +38,11 @@
   <script src="/src/js/main.js" defer type="module"></script>
 </head>
 
-<body>
+<body class="min-h-dvh bg-no-repeat bg-cover bg-center bg-[url(/src/assets/images/home/background-home-mobile.jpg)] md:bg-[url(/src/assets/images/home/background-home-tablet.jpg)] lg:bg-[url(/src/assets/images/home/background-home-desktop.jpg)] flex flex-col">
   <a href="#main-content" class="sr-only focus:not-sr-only">
     Skip to main content
   </a>
-  <header>
+  <header class="text-white flex flex-row justify-between items-center">
     <a href="/" aria-label="Space Tourism Home">
       <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
         <g fill="none" fill-rule="evenodd">
@@ -53,7 +53,7 @@
       </svg>
     </a>
     <button type="button" id="menu-button" aria-expanded="false" aria-controls="primary-navigation"
-      aria-label="Open navigation" class="group cursor-pointer">
+      aria-label="Open navigation" class="group relative z-50 cursor-pointer md:hidden">
       <svg class="group-aria-expanded:hidden" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
         width="24" height="21" viewBox="0 0 24 21">
         <g fill="#D0D6F9" fill-rule="evenodd">
@@ -68,9 +68,8 @@
         </g>
       </svg>
     </button>
-    <nav id="primary-navigation" aria-label="Primary navigation" data-open="false">
-
-      <ul role="list">
+    <nav id="primary-navigation" aria-label="Primary navigation" data-open="false" class="fixed inset-y-0 right-0 z-40 w-64 translate-x-full transition-transform duration-300 data-[open=true]:translate-x-0 md:static md:w-auto md:translate-x-0">
+      <ul role="list" class="flex flex-col gap-8 md:flex-row md:items-center md:gap-12">
         <li><a href="/" aria-current="page"><span aria-hidden="true">00</span> Home</a></li>
         <li><a href="/destination.html"><span aria-hidden="true">01</span> Destination</a></li>
         <li><a href="/crew.html"><span aria-hidden="true">02</span> Crew</a></li>
