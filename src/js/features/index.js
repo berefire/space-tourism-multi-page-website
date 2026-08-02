@@ -1,0 +1,1 @@
+export { initMobileMenu } from "@js/features/mobile-menu";

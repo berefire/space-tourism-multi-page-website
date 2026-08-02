@@ -56,7 +56,7 @@
       </svg>
     </a>
     <button type="button" id="menu-button" aria-expanded="false" aria-controls="primary-navigation"
-      aria-label="Open navigation" class="group relative z-50 cursor-pointer md:hidden">
+      aria-label="Open navigation" class="group relative z-50 cursor-pointer md:hidden" data-mobile-menu-button>
       <svg class="group-aria-expanded:hidden" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
         width="24" height="21" viewBox="0 0 24 21">
         <g fill="#D0D6F9" fill-rule="evenodd">
@@ -72,9 +72,8 @@
       </svg>
     </button>
     <nav id="primary-navigation" aria-label="Primary navigation" data-open="false"
-      class="fixed inset-y-0 right-0 z-40 w-64 translate-x-full transition-transform duration-300 data-[open=true]:translate-x-0 md:static md:h-24 md:min-w-0 md:flex-1 md:translate-x-0 md:bg-white/5 md:backdrop-blur-xl lg:order-3 lg:w-207.5 lg:flex-none lg:shrink-0">
-      <ul role="list" class="flex flex-col gap-8 md:grid md:h-full md:grid-cols-4  md:ms-29.25
-      md:me-10 md:gap-0">
+      class="fixed inset-y-0 right-0 z-40 w-[68%] translate-x-full transition-transform duration-300 motion-reduce:transition-none data-[open=true]:translate-x-0 md:static md:h-24 md:min-w-0 md:flex-1 md:translate-x-0 bg-white/5 backdrop-blur-[5rem] lg:order-3 lg:w-207.5 lg:flex-none lg:shrink-0" data-mobile-menu>
+      <ul role="list" class="flex flex-col gap-8 pt-30 md:grid md:h-full md:grid-cols-4  md:ms-29.25 md:me-10 md:gap-0 md:pt-0">
         <li class="md:h-full"><a href="/" class="link-nav" aria-current="page"><span
               class="font-bold tracking-[0.16875em]" aria-hidden="true">00</span> Home</a></li>
         <li class="md:h-full"><a class="link-nav" href="/destination.html"><span class="font-bold tracking-[0.16875em]"
