@@ -1,0 +1,26 @@
+@layer components {
+  .site-header {
+    @apply relative;
+
+    &::after {
+      content: "";
+      @apply hidden;
+    }
+
+    @variant lg {
+      &::after {
+        @apply absolute left-48.5 top-22 z-50 block h-px bg-white/25;
+
+        right: calc(var(--nav-width-desktop) - 2rem);
+      }
+    }
+  }
+
+  .link-nav {
+    @apply font-condensed text-[1rem] leading-4.75 uppercase tracking-[0.15em];
+
+    @variant md {
+      @apply relative flex gap-3 h-full w-fit items-center justify-self-center after:absolute after:inset-x-0 after:bottom-0 after:h-0.75 after:bg-transparent hover:after:bg-white/50 aria-[current=page]:after:bg-white;
+    }
+  }
+}

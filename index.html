@@ -38,13 +38,16 @@
   <script src="/src/js/main.js" defer type="module"></script>
 </head>
 
-<body class="min-h-dvh bg-no-repeat bg-cover bg-center bg-[url(/src/assets/images/home/background-home-mobile.jpg)] md:bg-[url(/src/assets/images/home/background-home-tablet.jpg)] lg:bg-[url(/src/assets/images/home/background-home-desktop.jpg)] flex flex-col">
+<body
+  class="min-h-dvh bg-no-repeat bg-cover bg-center bg-[url(/src/assets/images/home/background-home-mobile.jpg)] md:bg-[url(/src/assets/images/home/background-home-tablet.jpg)] lg:bg-[url(/src/assets/images/home/background-home-desktop.jpg)] flex flex-col">
   <a href="#main-content" class="sr-only focus:not-sr-only">
     Skip to main content
   </a>
-  <header class="text-white flex flex-row justify-between items-center">
-    <a href="/" aria-label="Space Tourism Home">
-      <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+  <header class="text-white flex flex-row justify-between items-center px-6 md:px-0 py-6 md:py-0 lg:pt-10 site-header">
+    <a class="md:px-10 grid shrink-0 place-items-center lg:ms-16 lg:w-12 lg:order-1" href="/"
+      aria-label="Space Tourism Home">
+      <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+        viewBox="0 0 48 48" class="size-10 md:size-12">
         <g fill="none" fill-rule="evenodd">
           <circle cx="24" cy="24" r="24" fill="#FFF" />
           <path fill="#0B0D17"
@@ -68,12 +71,18 @@
         </g>
       </svg>
     </button>
-    <nav id="primary-navigation" aria-label="Primary navigation" data-open="false" class="fixed inset-y-0 right-0 z-40 w-64 translate-x-full transition-transform duration-300 data-[open=true]:translate-x-0 md:static md:w-auto md:translate-x-0">
-      <ul role="list" class="flex flex-col gap-8 md:flex-row md:items-center md:gap-12">
-        <li><a href="/" aria-current="page"><span aria-hidden="true">00</span> Home</a></li>
-        <li><a href="/destination.html"><span aria-hidden="true">01</span> Destination</a></li>
-        <li><a href="/crew.html"><span aria-hidden="true">02</span> Crew</a></li>
-        <li><a href="/technology.html"><span aria-hidden="true">03</span> Technology</a></li>
+    <nav id="primary-navigation" aria-label="Primary navigation" data-open="false"
+      class="fixed inset-y-0 right-0 z-40 w-64 translate-x-full transition-transform duration-300 data-[open=true]:translate-x-0 md:static md:h-24 md:min-w-0 md:flex-1 md:translate-x-0 md:bg-white/5 md:backdrop-blur-xl lg:order-3 lg:w-207.5 lg:flex-none lg:shrink-0">
+      <ul role="list" class="flex flex-col gap-8 md:grid md:h-full md:grid-cols-4  md:ms-29.25
+      md:me-10 md:gap-0">
+        <li class="md:h-full"><a href="/" class="link-nav" aria-current="page"><span
+              class="font-bold tracking-[0.16875em]" aria-hidden="true">00</span> Home</a></li>
+        <li class="md:h-full"><a class="link-nav" href="/destination.html"><span class="font-bold tracking-[0.16875em]"
+              aria-hidden="true">01</span> Destination</a></li>
+        <li class="md:h-full"><a class="link-nav" href="/crew.html"><span class="font-bold tracking-[0.16875em]"
+              aria-hidden="true">02</span> Crew</a></li>
+        <li class="md:h-full"><a class="link-nav" href="/technology.html"><span class="font-bold tracking-[0.16875em]"
+              aria-hidden="true">03</span> Technology</a></li>
       </ul>
     </nav>
   </header>
