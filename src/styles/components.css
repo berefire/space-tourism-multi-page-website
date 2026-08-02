@@ -1,4 +1,31 @@
 @layer components {
+  .skip-link {
+    @apply sr-only;
+
+    &:focus-visible {
+      @apply not-sr-only
+        fixed
+        top-4
+        left-1/2
+        z-100
+        -translate-x-1/2
+        bg-white
+        px-4
+        py-2
+        text-slate-950
+        outline-2
+        outline-offset-2
+        outline-white;
+
+      @variant md {
+        @apply top-28;
+      }
+
+      @variant lg {
+        @apply top-4;
+      }
+    }
+  }
   .site-header {
     @apply relative;
 
@@ -50,4 +77,3 @@
     }
   }
 }
-
