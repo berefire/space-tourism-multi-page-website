@@ -1,0 +1,7 @@
+@theme {
+    --font-heading: "Bellefair", serif;
+    --font-condensed: "Barlow Condensed", sans-serif;
+    --font-body: "Barlow", sans-serif;
+
+    --nav-width-desktop: 51.875rem;
+}
