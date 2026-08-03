@@ -20,6 +20,10 @@ export function initMobileMenu() {
 
   controller.syncResponsiveState();
 
+  requestAnimationFrame(() => {
+    primaryNavigation.dataset.ready = "true";
+  });
+
   bindMenuEvents({
     menuButton,
     primaryNavigation,
