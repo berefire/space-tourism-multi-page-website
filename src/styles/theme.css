@@ -4,4 +4,7 @@
     --font-body: "Barlow", sans-serif;
 
     --nav-width-desktop: 51.875rem;
+
+    --color-blue-300: hsl(231, 77%, 90%);
+    --color-blue-900: hsl(230, 35%, 7%);
 }
