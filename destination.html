@@ -90,7 +90,9 @@
   </header>
   <main id="main-content" class="flex flex-1 px-6 py-6 md:px-10 md:py-10 lg:py-12">
     <div class="mx-auto flex flex-col gap-6 w-full max-w-277.5">
-      <h1 class="flex gap-6 justify-center md:justify-start md:items-start font-condensed text-white uppercase tracking-[0.15em] text-[1rem] md:text-[1.75rem]"><span class="opacity-25" aria-hidden="true">01</span>Pick your destination</h1>
+      <h1
+        class="flex gap-6 justify-center md:justify-start md:items-start font-condensed text-white uppercase tracking-[0.15em] text-[1rem] md:text-[1.75rem]">
+        <span class="opacity-25" aria-hidden="true">01</span>Pick your destination</h1>
       <div class="mt-8 grid grid-cols-1 items-center md:mt-14 lg:mt-16 lg:grid-cols-2 lg:gap-12">
         <div class="grid place-items-center">
           <picture class="block w-37.5 md:w-75 lg:w-120">
@@ -100,22 +102,28 @@
           </picture>
         </div>
         <div class="mt-8 md:mt-14 lg:mt-0">
-          Moon
-          Mars
-          Europa
-          Titan
+          <div class="destination-tabs" role="tablist" aria-label="Destination selection" data-destination-tabs>
+            <button type="button" class="destination-tab" role="tab" id="tab-moon" aria-selected="true"
+              aria-controls="destination-panel" tabindex="0" data-destination="moon">Moon</button>
+            <button type="button" class="destination-tab" role="tab" id="tab-mars" aria-selected="false"
+              aria-controls="destination-panel" tabindex="-1" data-destination="mars">Mars</button>
+            <button type="button" class="destination-tab" role="tab" id="tab-europa" aria-selected="false"
+              aria-controls="destination-panel" tabindex="-1" data-destination="europa">Europa</button>
+            <button type="button" class="destination-tab" role="tab" id="tab-titan" aria-selected="false"
+              aria-controls="destination-panel" tabindex="-1" data-destination="titan">Titan</button>
+          </div>
+          <div>
+            Moon
+            See our planet as you’ve never seen it before. A perfect relaxing trip away to help
+            regain perspective and come back refreshed. While you’re there, take in some history
+            by visiting the Luna 2 and Apollo 11 landing sites.
 
-          Moon
+            Avg. distance
+            384,400 km
 
-          See our planet as you’ve never seen it before. A perfect relaxing trip away to help
-          regain perspective and come back refreshed. While you’re there, take in some history
-          by visiting the Luna 2 and Apollo 11 landing sites.
-
-          Avg. distance
-          384,400 km
-
-          Est. travel time
-          3 days
+            Est. travel time
+            3 days
+          </div>
         </div>
       </div>
     </div>
