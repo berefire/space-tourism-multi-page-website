@@ -78,7 +78,7 @@
   }
 
   .destination-tabs {
-    @apply flex items-center justify-center gap-7; 
+    @apply flex items-center justify-center lg:justify-start gap-7; 
   }
 
   .destination-tab {
