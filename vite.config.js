@@ -13,6 +13,7 @@ export default defineConfig({
       "@assets": resolve(__dirname, "src/assets"),
       "@styles": resolve(__dirname, "src/styles"),
       "@js": resolve(__dirname, "src/js"),
+      "@data": resolve(__dirname, "src/data"),
     },
   },
 });
