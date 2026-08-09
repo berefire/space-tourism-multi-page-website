@@ -1,6 +1,6 @@
 import "@styles/app.css";
 
-import { initMobileMenu } from "@js/components";
+import { initMobileMenu, initNavHighlight } from "@js/components";
 import { DOM } from "@js/shared";
 
 function safeInit(name, fn) {
@@ -12,7 +12,9 @@ function safeInit(name, fn) {
 }
 
 async function initApp() {
+  safeInit("nav-highlight", initNavHighlight);
   safeInit("mobile-menu", initMobileMenu);
+  
 
   if (document.querySelector("[data-destination-panel]")) {
     const { initDestination } = await import("@js/features/destination");
