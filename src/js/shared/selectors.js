@@ -1,4 +1,5 @@
 export const SELECTORS = Object.freeze({
-  menuButton: "[data-mobile-menu-button]",
-  primaryNavigation: "[data-mobile-menu]",
+  // Mobile menu
+  menuButton: {selector: "[data-mobile-menu-button]", all: false},
+  primaryNavigation: {selector: "[data-mobile-menu]", all: false},
 });
