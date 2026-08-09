@@ -1,1 +1,1 @@
-export { initMobileMenu } from "@js/features/mobile-menu";
+export { initDestination } from "@js/features/destination";
