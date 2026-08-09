@@ -114,28 +114,28 @@
           <!-- Tabs -->
           <div class="destination-tabs" role="tablist" aria-label="Destination selection" data-destination-tabs>
             <button type="button" id="tab-moon" role="tab" aria-selected="true" aria-controls="destination-panel"
-              tabindex="0" class="destination-tab focus-ring" data-destination="moon">
+              tabindex="0" class="destination-tab focus-ring" data-destination-tab data-id="moon">
               Moon
             </button>
 
             <button type="button" id="tab-mars" role="tab" aria-selected="false" aria-controls="destination-panel"
-              tabindex="-1" class="destination-tab focus-ring" data-destination="mars">
+              tabindex="-1" class="destination-tab focus-ring" data-destination-tab data-id="mars">
               Mars
             </button>
 
             <button type="button" id="tab-europa" role="tab" aria-selected="false" aria-controls="destination-panel"
-              tabindex="-1" class="destination-tab focus-ring" data-destination="europa">
+              tabindex="-1" class="destination-tab focus-ring" data-destination-tab data-id="europa">
               Europa
             </button>
 
             <button type="button" id="tab-titan" role="tab" aria-selected="false" aria-controls="destination-panel"
-              tabindex="-1" class="destination-tab focus-ring" data-destination="titan">
+              tabindex="-1" class="destination-tab focus-ring" data-destination-tab data-id="titan">
               Titan
             </button>
           </div>
 
           <!-- Tab panel -->
-          <div id="destination-panel" role="tabpanel" aria-labelledby="tab-moon" tabindex="0" class="focus-ring"
+          <div id="destination-panel" role="tabpanel" aria-labelledby="tab-moon" tabindex="0" class="destination-panel focus-ring"
             data-destination-panel>
             <!-- Description -->
             <div class="flex flex-col items-center border-b border-white/25 pbe-6 lg:pbe-10 lg:items-start">
