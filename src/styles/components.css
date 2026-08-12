@@ -75,11 +75,11 @@
   }
 
   .crew-dots {
-    @apply mt-8 flex items-center justify-center gap-4;
+    @apply mt-8 lg:mt-50 flex items-center justify-center gap-4 lg:gap-10;
   }
 
   .crew-dot {
-    @apply relative size-2.5 shrink-0 cursor-pointer rounded-full bg-white/25 transition-colors duration-200 hover:bg-white/50 aria-selected:bg-white motion-reduce:transition-none;
+    @apply relative size-2.5 lg:size-3.75 shrink-0 cursor-pointer rounded-full bg-white/25 transition-colors duration-200 hover:bg-white/50 aria-selected:bg-white motion-reduce:transition-none;
   }
 
   .crew-dot::before {
