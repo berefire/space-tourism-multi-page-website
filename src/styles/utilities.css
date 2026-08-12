@@ -1,7 +1,12 @@
-@layer utilities {
-  .focus-ring {
-    @apply focus-visible:outline-2
-      focus-visible:outline-offset-4
-      focus-visible:outline-white;
+@utility focus-ring {
+  &:focus-visible {
+    outline: 0.125em solid white;
+    outline-offset: 0.25em;
   }
+}
+
+@utility full-bleed {
+  width: 100vw;
+  
+  margin-left: calc(50% - 50vw);
 }
