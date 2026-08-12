@@ -43,15 +43,15 @@
 
   <main id="main-content" class="flex flex-1 px-6 py-6 md:px-10 md:py-10
  lg:py-12">
-    <div class="mx-auto flex w-full max-w-277.5 flex-col gap-6">
+    <div class="page-content">
       <!-- Page heading -->
-      <h1 class="flex justify-center gap-6 font-condensed text-[1rem] uppercase tracking-[0.15em] text-white md:items-start md:justify-start md:text-[1.25rem] lg:text-[1.75rem]">
+      <h1 class="page-heading">
         <span class="text-white/25" aria-hidden="true">01</span>
         Pick your destination
       </h1>
 
       <!-- Destination -->
-      <div class="mt-8 grid grid-cols-1 items-center md:mt-14 lg:mt-16 lg:grid-cols-2 lg:gap-12">
+      <div class="mt-8 grid grid-cols-1 items-center md:mt-14 lg:mt-16 lg:grid-cols-2 lg:gap-14">
         <!-- Destination image -->
         <div class="grid place-items-center">
           <picture class="block w-37.5 md:w-75 lg:w-120">
@@ -88,16 +88,16 @@
           </div>
 
           <!-- Tab panel -->
-          <div id="destination-panel" role="tabpanel" aria-labelledby="tab-moon" tabindex="0" class="destination-panel focus-ring"
-            data-destination-panel>
+          <div id="destination-panel" role="tabpanel" aria-labelledby="tab-moon" tabindex="0"
+            class="destination-panel focus-ring" data-destination-panel>
             <!-- Description -->
             <div class="flex flex-col items-center border-b border-white/25 pbe-6 lg:pbe-10 lg:items-start">
-              <h2 class="font-heading text-[3.5rem] md:text-[5rem] lg:text-[6rem] uppercase text-white" data-destination-name>
+              <h2 class="font-heading text-[3.5rem] md:text-[5rem] lg:text-[6rem] uppercase text-white"
+                data-destination-name>
                 Moon
               </h2>
 
-              <p class="text-center font-body text-[0.9375rem] md:text-[1rem] lg:text-[1.125rem] leading-[1.8] text-blue-300 lg:text-left w-[38ch] md:w-[56ch] lg:w-[44ch]"
-                data-destination-description>
+              <p class="info-description lg:text-start w-[38ch] md:w-[56ch] lg:w-[44ch]" data-destination-description>
                 See our planet as you’ve never seen it before. A perfect
                 relaxing trip away to help regain perspective and come back
                 refreshed. While you’re there, take in some history by
@@ -133,4 +133,5 @@
     </div>
   </main>
 </body>
+
 </html>
