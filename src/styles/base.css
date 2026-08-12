@@ -38,4 +38,8 @@
     src: url("/src/assets/fonts/barlow/barlow-v13-latin-regular.woff2")
       format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+
+  body {
+    @apply overflow-x-hidden;
+  }
 }
