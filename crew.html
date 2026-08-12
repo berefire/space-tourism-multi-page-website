@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" translate="no">
+
 <head>
   <!-- @include head-shared.html -->
 
@@ -19,7 +20,8 @@
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Space Tourism crew members including the commander, mission specialist, pilot, and flight engineer">
+  <meta property="og:image:alt"
+    content="Space Tourism crew members including the commander, mission specialist, pilot, and flight engineer">
   <meta property="og:site_name" content="Space Tourism">
   <meta property="og:locale" content="en_US">
 
@@ -29,8 +31,10 @@
   <meta name="twitter:description"
     content="Meet the crew behind your journey to space, from mission commanders to flight engineers with real spaceflight experience.">
   <meta name="twitter:image" content="https://YOUR-DOMAIN.com/images/og-crew.jpg">
-  <meta name="twitter:image:alt" content="Space Tourism crew members including the commander, mission specialist, pilot, and flight engineer">
+  <meta name="twitter:image:alt"
+    content="Space Tourism crew members including the commander, mission specialist, pilot, and flight engineer">
 </head>
+
 <body
   class="min-h-dvh bg-no-repeat bg-cover bg-center bg-[url(/src/assets/images/crew/background-crew-mobile.jpg)] md:bg-[url(/src/assets/images/crew/background-crew-tablet.jpg)] lg:bg-[url(/src/assets/images/crew/background-crew-desktop.jpg)] flex flex-col">
   <a href="#main-content" class="skip-link">
@@ -39,13 +43,64 @@
 
   <!-- @include site-header.html -->
 
-  02 Meet your crew
+  <main id="main-content" class="flex flex-1 px-6 py-6 md:px-10 md:py-10
+ lg:py-12">
+    <div class="page-content">
+      <!-- Page heading -->
+      <h1 class="page-heading">
+        <span class="text-white/25" aria-hidden="true">02</span>
+        Meet your crew
+      </h1>
 
-  Commander
-  Douglas Hurley
+      <!-- Crew member -->
+      <div class="crew-layout grid grid-cols-1 items-center lg:grid-cols-2 gap-8">
+        <div class="mbs-10 flex flex-col gap-6 items-center">
+          <div id="crew-panel" role="tabpanel" aria-labelledby="tab-douglas-hurley" tabindex="0" class="crew-panel"
+            data-crew-panel>
+            <div class="flex flex-col gap-6 items-center lg:items-start">
+              <div class="flex flex-col">
+                <p class="font-heading uppercase text-white/25 text-center lg:text-start text-[1.125rem] md:text-2xl lg:text-[2rem]" data-crew-role>Commander</p>
+                <h2 class="font-heading text-white uppercase text-center lg:text-start text-2xl md:text-[2.5rem] lg:text-[3.5rem]" data-crew-name>Douglas Hurley</h2>
+              </div>
+              <p class="info-description lg:text-start max-w-[38ch] md:max-w-[56ch] lg:max-w-[53ch] pbe-8 md:pbe-0" data-crew-bio>
+                Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
+              </p>
+            </div>
+          </div>
 
-  Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-  and former NASA astronaut. He launched into space for the third time as 
-  commander of Crew Dragon Demo-2.
+          <div class="crew-dots" role="tablist" aria-label="Crew member selection" data-crew-tabs>
+            <button type="button" id="tab-douglas-hurley" role="tab" aria-selected="true" aria-controls="crew-panel"
+              tabindex="0" class="crew-dot focus-ring" data-crew-tab data-id="douglas-hurley">
+              <span class="sr-only">Douglas Hurley, Commander</span>
+            </button>
+
+            <button type="button" id="tab-mark-shuttleworth" role="tab" aria-selected="false" aria-controls="crew-panel"
+              tabindex="-1" class="crew-dot focus-ring" data-crew-tab data-id="mark-shuttleworth">
+              <span class="sr-only">Mark Shuttleworth, Mission Specialist</span>
+            </button>
+
+            <button type="button" id="tab-victor-glover" role="tab" aria-selected="false" aria-controls="crew-panel"
+              tabindex="-1" class="crew-dot focus-ring" data-crew-tab data-id="victor-glover">
+              <span class="sr-only">Victor Glover, Pilot</span>
+            </button>
+
+            <button type="button" id="tab-anousheh-ansari" role="tab" aria-selected="false" aria-controls="crew-panel"
+              tabindex="-1" class="crew-dot focus-ring" data-crew-tab data-id="anousheh-ansari">
+              <span class="sr-only">Anousheh Ansari, Flight Engineer</span>
+            </button>
+          </div>
+        </div>
+        <div class="crew-photo-wrapper grid place-items-center">
+          <picture class="block w-[min(19.25rem,100%)] md:w-77 lg:w-120">
+            <source srcset="/src/assets/images/crew/image-douglas-hurley.webp" type="image/webp" data-crew-source>
+
+            <img src="/src/assets/images/crew/image-douglas-hurley.png" alt="Douglas Hurley, Commander"
+              class="crew-photo" data-crew-image>
+          </picture>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
+
 </html>
