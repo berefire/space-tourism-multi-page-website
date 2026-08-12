@@ -20,6 +20,11 @@ async function initApp() {
     const { initDestination } = await import("@js/features/destination");
     safeInit("destination", initDestination);
   }
+
+  if (document.querySelector("[data-crew-panel]")) {
+    const { initCrew } = await import("@js/features/crew");
+    safeInit("crew", initCrew);
+  }
 }
 
 initApp();
