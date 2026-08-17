@@ -74,8 +74,48 @@
     @apply text-center font-body text-[0.9375rem] md:text-[1rem] lg:text-[1.125rem] leading-[1.8] text-blue-300;
   }
 
+  .crew-layout {
+    @apply relative grid gap-8;
+    grid-template-areas:
+      "info"
+      "dots"
+      "photo";
+    grid-template-columns: 1fr;
+
+    @media (min-width: 48rem) and (max-width: 63.9375rem) {
+      grid-template-rows: auto auto 1fr;
+    }
+
+    @variant lg {
+      grid-template-areas: "info photo";
+      grid-template-columns: 1fr 1fr;
+      @apply items-center gap-14;
+    }
+  }
+
+  .crew-panel {
+    @variant lg {
+      grid-row: 2;
+      align-self: center;
+    }
+  }
+
+  .crew-info {
+    @apply flex flex-col items-center;
+
+    @variant lg {
+      @apply items-start;
+    }
+  }
+
   .crew-dots {
-    @apply mt-8 lg:mt-50 flex items-center justify-center gap-4 lg:gap-10;
+    @apply mt-8 flex items-center justify-center gap-4;
+
+    @variant lg {
+      @apply absolute bottom-0 justify-start mt-0;
+      left: 0;
+      width: calc(50% - 1.75rem);
+    }
   }
 
   .crew-dot {
@@ -88,7 +128,7 @@
   }
 
   .crew-photo {
-    @apply block h-auto w-full;
+    @apply block h-auto w-full object-cover;
     mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
 
@@ -112,13 +152,83 @@
   }
 
   @media (min-width: 48rem) and (max-width: 63.9375rem) {
-    .crew-layout {
-      display: flex;
-      flex-direction: column;
+    .crew-photo-wrapper {
+      @apply h-full items-end;
+      margin-bottom: -2.5rem;
     }
 
-    .crew-photo-wrapper {
-      @apply full-bleed;
+    .crew-photo {
+      aspect-ratio: 446.74 / 560;
+      @apply w-full h-full object-cover;
+      object-position: center top;
     }
+  }
+
+  .technology-layout {
+    @apply grid gap-8;
+    grid-template-areas:
+      "image"
+      "numbers"
+      "text";
+    grid-template-columns: 1fr;
+
+    @variant lg {
+      grid-template-areas: "numbers text image";
+      grid-template-columns: auto 1fr 1.2fr;
+      @apply items-center gap-12;
+    }
+  }
+
+  .technology-image-wrapper {
+    @apply full-bleed;
+
+    @variant lg {
+      width: auto;
+      margin-left: 0;
+      margin-right: calc(
+        -1 * (2.5rem + max(0px, (100vw - 5rem - 69.375rem) / 2))
+      );
+    }
+  }
+
+  .technology-image {
+    @apply block h-auto w-full bg-cover;
+
+    @variant lg {
+      @apply aspect-square;
+    }
+  }
+
+  .technology-numbers {
+    @apply flex items-center justify-center gap-4;
+
+    @variant lg {
+      @apply flex-col justify-start;
+    }
+  }
+
+  .technology-number {
+    @apply grid size-10 shrink-0 cursor-pointer place-items-center rounded-full border border-white/25 font-heading text-white transition-colors duration-200 hover:border-white aria-selected:bg-white aria-selected:text-blue-900 motion-reduce:transition-none;
+  }
+
+  .technology-panel {
+    @apply flex flex-col items-center gap-4 text-center;
+    @apply transition-opacity duration-150 motion-reduce:transition-none;
+
+    @variant lg {
+      @apply items-start text-left;
+    }
+  }
+
+  .techology-panel.is-updating {
+    @apply opacity-0;
+  }
+
+  .technology-panel__eyebrow {
+    @apply font-condensed uppercase tracking-[0.15em] text-blue-300;
+  }
+
+  .technology-panel__name {
+    @apply font-heading text-[1.5rem] uppercase text-white md:text-[2rem] lg:text-[2.5rem];
   }
 }
