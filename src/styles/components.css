@@ -100,6 +100,7 @@
   }
 
   .crew-panel {
+    grid-area: panel;
     @variant lg {
       grid-row: 2;
       align-self: center;
@@ -107,6 +108,7 @@
   }
 
   .crew-info {
+    grid-area: info;
     @apply flex flex-col items-center;
 
     @variant lg {
@@ -115,6 +117,7 @@
   }
 
   .crew-dots {
+    grid-area: dots;
     @apply mt-8 flex items-center justify-center gap-4 lg:gap-10;
 
     @variant lg {
@@ -154,6 +157,7 @@
   }
 
   .crew-photo-wrapper {
+    grid-area: photo;
     @apply grid place-items-center;
   }
 
@@ -190,6 +194,7 @@
   }
 
   .technology-image-wrapper {
+    grid-area: image;
     @apply full-bleed;
 
     @variant lg {
@@ -210,6 +215,7 @@
   }
 
   .technology-numbers {
+    grid-area: numbers;
     @apply flex items-center justify-center gap-4 lg:gap-8;
 
     @variant lg {
@@ -222,15 +228,12 @@
   }
 
   .technology-panel {
+    grid-area: text;
     @apply flex flex-col items-center gap-4 text-center;
 
     @variant lg {
       @apply items-start text-left;
     }
-  }
-
-  .techology-panel.is-updating {
-    @apply opacity-0;
   }
 
   .technology-panel__eyebrow {
