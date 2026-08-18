@@ -1,10 +1,3 @@
-/**
- * Register tab events for click and keyboard (arrow/Home/End) navigation.
- *
- * @param {ReturnType<import("./controller.js").createTabsController>} controller
- * @param {(id: string | null) => void} onChange - Always receives the active tab id (string), never the DOM element.
- */
-
 const KEYBOARD = {
   LEFT: "ArrowLeft",
   RIGHT: "ArrowRight",
@@ -24,6 +17,12 @@ function getPreviousIndex(index, total) {
   return (index - 1 + total) % total;
 }
 
+/**
+ * Determines which tab keyboard navigation should move to, per the
+ * WAI-ARIA APG tabs pattern (arrow keys wrap around; Home/End jump to
+ * the first/last tab). Returns null for any other key, signaling the
+ * caller to let the browser handle it normally.
+ */
 function getTargetTab(event, tabs, currentIndex) {
   switch (event.key) {
     case KEYBOARD.RIGHT:
@@ -42,6 +41,19 @@ function getTargetTab(event, tabs, currentIndex) {
       return null;
   }
 }
+
+/**
+ * Registers click and keyboard (arrows/Home/End) listeners on every
+ * tab, implementing the roving-tabindex pattern: selection and focus
+ * move together on keyboard navigation, matching WAI-ARIA APG tabs
+ * behavior.
+ *
+ * @param {ReturnType<import("./controller.js").createTabsController>} controller
+ * @param {(id: string | null) => void} onChange - Called after every
+ *   selection change (click or keyboard) with the new active tab's id.
+ *   Always receives a string id — never the DOM element — so callers
+ *   don't need to know tabs are backed by buttons internally.
+ */
 
 export function registerTabEvents(controller, onChange) {
   controller.tabs.forEach((tab) => {
