@@ -53,12 +53,14 @@
   }
 
   .destination-panel,
-  .crew-panel {
+  .crew-panel,
+  .technology-panel {
     @apply transition-opacity duration-150 motion-reduce:transition-none;
   }
 
   .destination-panel.is-updating,
-  .crew-panel.is-updating {
+  .crew-panel.is-updating,
+  .technology-panel.is-updating {
     @apply opacity-0;
   }
 
@@ -213,7 +215,6 @@
 
   .technology-panel {
     @apply flex flex-col items-center gap-4 text-center;
-    @apply transition-opacity duration-150 motion-reduce:transition-none;
 
     @variant lg {
       @apply items-start text-left;
