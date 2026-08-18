@@ -1,59 +1,31 @@
 import data from "@data/data.json";
-
-import { resolveAsset, prefersReducedMotion } from "@js/shared";
-import { initTabs } from "@js/components/tabs";
+import { resolveAsset } from "@js/shared";
+import { initTabFeature } from "@js/shared/tab-feature.js";
 import { DOM } from "./dom.js";
-import { SELECTORS } from "./selectors.js";
 
-const technology = data.technology;
+/**
+ * Applies a technology item's data to the DOM — the only
+ * technology-specific piece; everything else is handled by
+ * initTabFeature.
+ *
+ * @param {Object} vehicle - A technology entry from data.json
+ *   (launch-vehicle, spaceport, or space-capsule).
+ */
 
-function findTechnology(id) {
-  return technology.find((vehicle) => vehicle.id === id);
-}
-
-function updateImage(vehicle) {
+function updateTechnology(vehicle) {
   DOM.technologySource.srcset = resolveAsset(vehicle.images.landscape);
   DOM.technologyImage.src = resolveAsset(vehicle.images.portrait);
   DOM.technologyImage.alt = vehicle.name;
-}
 
-function updateInformation(vehicle) {
   DOM.technologyName.textContent = vehicle.name;
   DOM.technologyDescription.textContent = vehicle.description;
 }
 
-function updateTechnology(id) {
-  const vehicle = findTechnology(id);
-
-  if (!vehicle) {
-    return;
-  }
-
-  const panel = DOM.technologyPanel;
-  panel.classList.add("is-updating");
-  if (prefersReducedMotion()) {
-    updateImage(vehicle);
-    updateInformation(vehicle);
-    panel.classList.remove("is-updating");
-  } else {
-    panel.addEventListener("transitionend", () => {
-      updateImage(vehicle);
-      updateInformation(vehicle);
-      panel.classList.remove("is-updating");
-    }, { once: true });
-  }
-}
-
 export function initTechnology() {
-  const { technologyTabs, technologyPanel } = DOM;
-
-  if (!technologyTabs || technologyTabs.length === 0 || !technologyPanel) {
-    return;
-  }
-
-  initTabs({
+  initTabFeature({
+    items: data.technology,
     tabs: DOM.technologyTabs,
     panel: DOM.technologyPanel,
-    onChange: updateTechnology,
+    onUpdate: updateTechnology,
   });
 }
