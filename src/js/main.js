@@ -25,6 +25,11 @@ async function initApp() {
     const { initCrew } = await import("@js/features/crew");
     safeInit("crew", initCrew);
   }
+
+  if (document.querySelector("[data-technology-panel]")) {
+    const { initTechnology } = await import("@js/features/technology");
+    safeInit("technology", initTechnology);
+  }
 }
 
 initApp();
