@@ -76,6 +76,10 @@
     @apply text-center font-body text-[0.9375rem] md:text-[1rem] lg:text-[1.125rem] leading-[1.8] text-blue-300;
   }
 
+  .crew-content {
+    @apply gap-16 lg:gap-6;
+  }
+
   .crew-layout {
     @apply relative grid gap-8;
     grid-template-areas:
@@ -111,7 +115,7 @@
   }
 
   .crew-dots {
-    @apply mt-8 flex items-center justify-center gap-4;
+    @apply mt-8 flex items-center justify-center gap-4 lg:gap-10;
 
     @variant lg {
       @apply absolute bottom-0 justify-start mt-0;
