@@ -51,7 +51,23 @@ Users should be able to:
 
 ### 📸Screenshot
 
-![Space Tourism website screenshot](./screenshot.jpg)
+#### Mobile (375x914)
+
+| _Main_ | _Destination_ | _Crew_ | _Technology_ |
+| ------ | ------ | ------------- | ------------ |
+| ![Mobile Home](./docs/screenshots/mobile-home.png) | ![Mobile Destination](./docs/screenshots/mobile-destination.png) | ![Mobile Crew](./docs/screenshots/mobile-crew.png) | ![Mobile Technology](./docs/screenshots/mobile-technology.png) |  
+
+#### Tablet (768x914)
+
+| _Main_ | _Destination_ | _Crew_ | _Technology_ |
+| ------ | ------ | ------------- | ------------ |
+| ![Tablet Home](./docs/screenshots/tablet-home.png) | ![Tablet Destination](./docs/screenshots/tablet-destination.png) | ![Tablet Crew](./docs/screenshots/tablet-crew.png) | ![Tablet Technology](./docs/screenshots/tablet-technology.png) |
+
+#### Desktop (1440x914)
+
+| _Main_ | _Destination_ | _Crew_ | _Technology_ |
+| ------ | ------ | ------------- | ------------ |
+| ![Desktop Home](./docs/screenshots/desktop-home.png) | ![Desktop Destination](./docs/screenshots/desktop-destination.png) | ![Desktop Crew](./docs/screenshots/desktop-crew.png) | ![Desktop Technology](./docs/screenshots/desktop-technology.png) |  
 
 ---
 
