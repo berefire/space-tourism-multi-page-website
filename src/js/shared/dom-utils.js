@@ -8,7 +8,7 @@ export function buildDOMRefs(selectors) {
       if (import.meta.env.DEV) {
         const isEmpty = all ? result.length === 0 : result === null;
         if (isEmpty) {
-          console.warn(`[DOM] No se encontró "${key}" → ${selector}`);
+          console.warn(`[DOM] No element found for "${key}" → ${selector}`);
         }
       }
 
