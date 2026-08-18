@@ -73,7 +73,7 @@ Users should be able to:
 
 ### 🔗Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/space-tourism-accessible-multi-page-site-with-vite-and-tailwind-83JsCvUrFO](https://www.frontendmentor.io/solutions/space-tourism-accessible-multi-page-site-with-vite-and-tailwind-83JsCvUrFO)
 - Live Site URL: [https://berefire.github.io/space-tourism-multi-page-website/index.html](https://berefire.github.io/space-tourism-multi-page-website/index.html)
 
 ---
